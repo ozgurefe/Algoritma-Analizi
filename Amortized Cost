@@ -16,17 +16,17 @@ public class DiziyeElemanAtama {
         }
         /* İkinci for döngüsünün karmaşıklığı O(n) dir. */
                 
-        array.addValue(arr);
-        array.addValue(arr2);
+        dizi.addValue(arr);
+        dizi.addValue(arr2);
         
         
         /* Java da nesne atama işleminin karmaşıklığı O(n) dir. */
-        array1 = array;
+        dizi1 = dizi;
         
-        System.out.println("array listesinin elemanları: ");
+        System.out.println("dizi listesinin elemanları: ");
         array.writeValueOfList();
         
-        System.out.println("array1 in elemanları");
+        System.out.println("dizi1 in elemanları");
         array1.writeValueOfList();
         
         
