@@ -1,0 +1,29 @@
+public class QuickSort {
+    public void quickSort(int dizi[], int ilk, int son){
+        if(ilk < son){
+            int ilkIndex = quickPartition(dizi, ilk, son);
+            quickSort(dizi, ilk, ilkIndex - 1);
+            quickSort(dizi, ilkIndex+1, son);
+        }
+        else    return;
+    }
+    public int quickPartition(int dizi[],int ilk, int son){
+        int temp;
+        int pivot = dizi[son];
+        int ilkIndex = ilk;
+
+        for(int i = ilk; i < son; i++){
+            if(dizi[i] <= pivot){
+                temp = dizi[i];
+                dizi[i] = dizi[ilkIndex];
+                dizi[ilkIndex] = temp;
+                ilkIndex++;
+            }
+        }
+        
+        temp = dizi[ilkIndex];
+        dizi[ilkIndex] = dizi[son];
+        dizi[son] = temp;
+        return ilkIndex;
+    }
+}
